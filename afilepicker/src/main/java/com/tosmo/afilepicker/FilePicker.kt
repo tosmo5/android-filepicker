@@ -1,4 +1,4 @@
-package com.tosmo.filepicker
+package com.tosmo.afilepicker
 
 import android.app.Activity
 import android.content.Context
@@ -47,7 +47,6 @@ class FilePicker private constructor(
          */
         val STORAGE_PATH = Environment.getExternalStorageDirectory().toString() + "/"
     }
-    
     enum class SortType {
         /**
          * 文件名正序
