@@ -4,9 +4,17 @@ plugins {
     id 'maven-publish'
 }
 
-task generateSourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier 'sources'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.tosmo5'
+                artifactId = 'afilepicker'
+                version = '0.1.0'
+            }
+        }
+    }
 }
 
 android {
@@ -33,19 +41,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-    }
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.tosmo5'
-                artifactId = 'afilepicker'
-                version = '0.1.0'
-            }
-        }
     }
 }
 
