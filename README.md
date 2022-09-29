@@ -14,6 +14,6 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-    implementation 'com.github.tosmo5:android-filepicker:Tag'
+    implementation 'com.github.tosmo5:android-filepicker:0.1.0'
 }
 ```
